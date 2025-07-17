@@ -1,4 +1,4 @@
-# clojure-intro
+# Clojure
 
 Este projeto demonstra como buscar dados de uma API REST de forma sequencial e concorrente usando Clojure.
 

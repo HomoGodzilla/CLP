@@ -1,4 +1,4 @@
-(ns clojure-intro.core
+(ns teste.core
   (:require [clj-http.client :as http]
             [cheshire.core :as json])
   (:gen-class))
