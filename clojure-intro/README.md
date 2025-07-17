@@ -1,44 +1,37 @@
 # clojure-intro
 
-FIXME: description
+Este projeto demonstra como buscar dados de uma API REST de forma sequencial e concorrente usando Clojure.
 
-## Installation
+## Descrição
 
-Download from http://example.com/FIXME.
+O código busca os títulos de 10 artigos da API [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts/). Ele apresenta duas abordagens:
 
-## Usage
+- **Sequencial:** Busca cada artigo um após o outro.
+- **Concorrente:** Dispara múltiplas requisições em paralelo usando `future` e armazena os resultados em um átomo.
 
-FIXME: explanation
+## Principais funções
 
-    $ java -jar clojure-intro-0.1.0-standalone.jar [args]
+- `buscar-artigo`: Busca um artigo pelo ID na API.
+- `extrair-titulo`: Extrai o título do artigo a partir do JSON retornado.
+- `buscar-e-processar`: Combina busca e extração do título.
+- `buscar-sequencialmente`: Executa as buscas de forma sequencial.
+- `buscar-concorrentemente`: Executa as buscas de forma concorrente.
+- `-main`: Função principal que executa ambas as abordagens e mede o tempo de execução.
 
-## Options
+## Como executar
 
-FIXME: listing of options this app accepts.
+1. Instale as dependências (`clj-http` e `cheshire`).
+2. Execute o projeto com:
 
-## Examples
+    ```bash
+    lein run
+    ```
 
-...
+## Saída esperada
 
-### Bugs
+O programa imprime os títulos dos artigos buscados, mostrando a diferença de tempo entre as abordagens sequencial e concorrente.
 
-...
+## Requisitos
 
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2025 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+- [Leiningen](https://leiningen.org/) ou [Clojure CLI](https://clojure.org/guides/getting_started)
+- Conexão com a internet

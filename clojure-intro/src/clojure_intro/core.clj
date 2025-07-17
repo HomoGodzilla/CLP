@@ -3,9 +3,6 @@
             [cheshire.core :as json])
   (:gen-class))
 
-;; --- Definições Iniciais ---
-
-;; Usaremos a API JSONPlaceholder, que é ótima para testes.
 (def ids-artigos (range 1 11)) ; Queremos buscar 10 artigos
 
 ;; A URL base da API
